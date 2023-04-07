@@ -57,7 +57,3 @@ svg
 
 const xAxis = d3.axisBottom(xScale);
 const yAxis = d3.axisLeft(yScale);
-
-svg.append("g").attr("transform", `translate(0, ${height})`).call(xAxis);
-
-svg.append("g").call(yAxis);

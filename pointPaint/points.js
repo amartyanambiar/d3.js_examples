@@ -16,7 +16,11 @@ for (var k = 1; k < 20; k += 1) {
       });
   }
 }
-
+d3.selectAll(".circles").on("click", (d) => {
+  console.log(d.target.id);
+  var randomnumber = Math.floor(Math.random() * 16777215).toString(16); // bing power
+  d3.select(`#${d.target.id}`).style("fill", `#${randomnumber}`);
+});
 d3.select("button").on("click", (d) => {
   if (d3.selectAll(".circles").style("fill") == "blue") {
     console.log("Succes");
